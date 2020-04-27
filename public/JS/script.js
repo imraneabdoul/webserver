@@ -3,7 +3,7 @@ let valueSearch = document.getElementById('valueSearch')
 let prevision = document.getElementById('prevision')
 
 const requestAPI = (city) =>{
-    fetch("http://localhost:3000/weather?address="+city+"").then((response) =>{
+    fetch("/weather?address="+city+"").then((response) =>{
         response.json().then((data)=>{
             if(data.error){
                 console.log(data.error)
